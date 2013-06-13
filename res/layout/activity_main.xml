@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <VerticalSeekBar
+            android:layout_width="wrap_content"
+            android:id="@+id/leftStick"
+            android:max="100"
+            android:layout_height="400dp"/>
+    <VerticalSeekBar
+            android:layout_width="wrap_content"
+            android:id="@+id/rightStick"
+            android:max="100"
+            android:layout_height="400dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/left_label"
+            android:id="@+id/leftLabel"
+            android:layout_alignTop="@+id/leftStick"
+            android:layout_toRightOf="@+id/leftStick"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/leftValue"
+            android:layout_below="@+id/leftLabel"
+            android:layout_toRightOf="@+id/leftStick"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/right_label"
+            android:id="@+id/rightLabel"
+            android:layout_below="@+id/leftValue"
+            android:layout_toLeftOf="@+id/rightStick"
+            android:layout_marginTop="18dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/rightValue"
+            android:layout_below="@+id/rightLabel"
+            android:layout_toLeftOf="@+id/rightStick"/>
+</RelativeLayout>
